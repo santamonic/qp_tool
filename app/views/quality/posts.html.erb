@@ -1,0 +1,20 @@
+<h1>Quality TOOL</h1>
+
+<h4><a href="#">QP TOOL 평가</a> || <a href="#">Coding Guideline</a> | <a href="#">Unit Test&Coverage</a> | <a href="#">Static Analystics</a> | <a href="#">Cyclomatic Complexity</a></h4>
+
+<div>
+  <h2>QP TOOL 분석</h2>
+  <p>최고의 TOOL 을 알려주세요!</p>
+</div>
+
+<hr>
+
+<% @posts.reverse.each do |post| %>
+<div style="border: 1px solid #ffffff">
+  <h4><%= post.toolname %></h4>
+  <p style="color: #ff0000"><%= post.quality_practice %></p>
+  <p>TOOL 용도 </p>
+  <p><%= post.title %></p>
+</div>
+<% end %>
+
