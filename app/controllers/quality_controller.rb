@@ -4,6 +4,17 @@ class QualityController < ApplicationController
   end
 
   def posts_category
+    case params[:quality_practice]
+    when "coding"
+      @quality_practice = "Coding Guideline"
+    when "unit"
+      @quality_practice = "Unit Test&Coverage"   
+    when "static"
+      @quality_practice = "Static Analystics"
+    else
+      @quality_practice = "Cyclomatic Complexity"
+    end
+      @posts = Post.where(quality_practice:  @quality_practice)
   end
 
   def show

@@ -1,4 +1,14 @@
 Rails.application.routes.draw do
+  root 'quality#posts'
+#  get "quality/posts_category" 
+  get "/:quality_practice" => 'quality#posts_category'
+  get "quality/show"
+  get "quality/write"
+  get "quality/write_complete"
+  get "quality/edit"
+  get "quality/edit_complete"
+  get "quality/delete_complete"
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
