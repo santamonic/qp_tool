@@ -1,0 +1,9 @@
+<% @posts.reverse.each do |post| %>
+<div style="border: 1px solid #ffffff">
+  <h4><%= post.toolname %></h4>
+  <p style="color: #ff0000"><%= post.quality_practice %></p>
+  <p>TOOL 용도 </p>
+  <p><%= post.title %></p>
+</div>
+<% end %>
+
