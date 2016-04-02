@@ -1,2 +1,29 @@
-<h1>Quality#edit</h1>
-<p>Find me in app/views/quality/edit.html.erb</p>
+<p><%= flash[:alert] %></p>
+<h2>quality tool 수정하기</h2>
+
+<form action="/quality/edit_complete" method="post">
+  <input type="hidden" name="id" value="<%= @post.id %>">
+  <p style="color: #ff0000">Quality Practice:
+  <select name="post_category">
+    <option value="Coding Guideline">Coding Guideline</option>
+    <option value="Unit Test&Coverage">Unit Test&Coverage</option>
+    <option value="Static Analystics">Static Analystics</option>
+    <option value="Cyclomatic Complexity">Cyclomatic Complexity</option>
+  </select></p>
+  <p>도구명: <input type="text" name="post_tool" value="<%= @post.toolname %>"></p>
+  <p>용도: <textarea name="post_title" ><%= @post.title %></textarea></p>
+  <p>지원언어: <input type="text" name="post_language" value="<%= @post.support_language %>"></p>
+  <p>지원OS: <input type="text" name="post_os" value="<%= @post.support_os %>"></p>
+  <p style="color: #ff0000">구매필요여부:
+  <select name="post_buyneed">
+    <option value="오픈소스">오픈소스</option>
+    <option value="사내개발">사내개발</option>
+    <option value="상용">상용</option>
+  </select></p>
+  <p>Java8 지원버전: <input type="text" name="post_version" value="<%= @post.support_javaversion %>"></p>
+  <p>URL: <input type="text" name="post_url"  value="<%= @post.urlname %>"></p>
+  <input type="submit" value="수정하기">
+</form>
+
+
+

@@ -1,2 +1,28 @@
-<h1>Quality#write</h1>
-<p>Find me in app/views/quality/write.html.erb</p>
+<p><%= flash[:alert] %></p>
+<h2>quality tool 추가하기</h2>
+
+<form action="/quality/write_complete" method="post">
+  <p style="color: #ff0000">Quality Practice:
+  <select name="post_category">
+    <option value="Coding Guideline">Coding Guideline</option>
+    <option value="Unit Test&Coverage">Unit Test&Coverage</option>
+    <option value="Static Analystics">Static Analystics</option>
+    <option value="Cyclomatic Complexity">Cyclomatic Complexity</option>
+  </select></p>
+  <p>도구명: <input type="text" name="post_tool" placeholder="도구명을 입력하세요."></p>
+  <p>용도: <textarea name="post_title" placeholder="도구 용도를 입력하세요."></textarea></p>
+  <p>지원언어: <input type="text" name="post_language" placeholder="지원언어를 입력하세요."></p>
+  <p>지원OS: <input type="text" name="post_os" placeholder="지원OS를 입력하세요."></p>
+  <p style="color: #ff0000">구매필요여부:
+  <select name="post_buyneed">
+    <option value="오픈소스">오픈소스</option>
+    <option value="사내개발">사내개발</option>
+    <option value="상용">상용</option>
+  </select></p>
+  <p>Java8 지원버전: <input type="text" name="post_version" placeholder="Java8 지원버전을 입력하세요."></p>
+  <p>URL: <input type="text" name="post_url" placeholder="URL을 입력하세요."></p>
+  <input type="submit" value="추가하기">
+</form>
+
+
+
