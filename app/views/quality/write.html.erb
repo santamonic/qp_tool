@@ -1,7 +1,7 @@
 <p><%= flash[:alert] %></p>
 <h2>quality tool 추가하기</h2>
 
-<form action="/quality/write_complete" method="post">
+<form action="/quality/write_complete" method="post" enctype="multipart/form-data">
   <p style="color: #ff0000">Quality Practice:
   <select name="post_category">
     <option value="Coding Guideline">Coding Guideline</option>
@@ -21,6 +21,7 @@
   </select></p>
   <p>Java8 지원버전: <input type="text" name="post_version" placeholder="Java8 지원버전을 입력하세요."></p>
   <p>URL: <input type="text" name="post_url" placeholder="URL을 입력하세요."></p>
+  <p>사진업로드: <input type="file" name="image"></p>
   <input type="submit" value="추가하기">
 </form>
 

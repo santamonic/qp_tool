@@ -33,7 +33,8 @@ class QualityController < ApplicationController
     post.support_os = params[:post_os]
     post.buy_need = params[:post_buyneed]
     post.support_javaversion = params[:post_version]
-    post.urlname = params[:post_url] 
+    post.urlname = params[:post_url]
+    post.image = params[:image] 
     if post.save
       flash[:alert] = "저장되었습니다."
       redirect_to "/quality/show/#{post.id}"

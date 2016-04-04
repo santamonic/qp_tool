@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160329092749) do
+ActiveRecord::Schema.define(version: 20160404074836) do
 
   create_table "posts", force: :cascade do |t|
     t.string   "quality_practice"
@@ -24,6 +24,7 @@ ActiveRecord::Schema.define(version: 20160329092749) do
     t.string   "urlname"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "image"
   end
 
 end
