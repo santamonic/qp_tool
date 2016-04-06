@@ -1,9 +1,10 @@
-<div>
-  <h2><%= @quality_practice %> 리스트입니다.</h2>
+<div class="container">
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <h3 class="panel-title"><%= @quality_practice %> 리스트입니다.</h3>
+    </div>
+  </div>
+
+  <%= render :partial => "quality/posts" %>
 </div>
-
-<hr>
-
-<%= render :partial => "quality/posts" %>
-
 

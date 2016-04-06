@@ -1,10 +1,17 @@
 <% @posts.reverse.each do |post| %>
-<div style="border: 1px solid #ffffff">
-  <p><img src="<%= post.image_url(:thumb) %>"></p>
-  <h4><a href="/quality/show/<%= post.id %>"><%= post.toolname %></a></h4>
-  <p style="color: #ff0000"><%= post.quality_practice %></p>
-  <p>TOOL 용도 </p>
-  <p><%= post.title %></p>
+<div class="panel">
+  <div class="row panel-body">
+    <div class="col-md-3">
+    </div>
+    <div class="col-md-3 text-right">
+      <p><img src="<%= post.image_url(:thumb) %>" class="img-rounded"></p>
+    </div>
+    <div class="col-md-6">
+      <h4><a href="/quality/show/<%= post.id %>"><%= post.toolname %></a></h4>
+      <p><span class="label label-warning"><%= post.quality_practice %></span></p>
+      <p><strong><%= post.title %></strong></p>
+    </div>
+   </div>
 </div>
 <% end %>
 

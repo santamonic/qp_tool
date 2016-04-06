@@ -1,29 +1,45 @@
-<p><%= flash[:alert] %></p>
-<h2>quality tool 추가하기</h2>
+<div class="container">
+  <% if !flash[:alert].nil? %>
+  <div class="alert alert-danger">
+    <%= flash[:alert] %>
+  </div>
+  <% end %>
 
-<form action="/quality/write_complete" method="post" enctype="multipart/form-data">
-  <p style="color: #ff0000">Quality Practice:
-  <select name="post_category">
-    <option value="Coding Guideline">Coding Guideline</option>
-    <option value="Unit Test&Coverage">Unit Test&Coverage</option>
-    <option value="Static Analystics">Static Analystics</option>
-    <option value="Cyclomatic Complexity">Cyclomatic Complexity</option>
-  </select></p>
-  <p>도구명: <input type="text" name="post_tool" placeholder="도구명을 입력하세요."></p>
-  <p>용도: <textarea name="post_title" placeholder="도구 용도를 입력하세요."></textarea></p>
-  <p>지원언어: <input type="text" name="post_language" placeholder="지원언어를 입력하세요."></p>
-  <p>지원OS: <input type="text" name="post_os" placeholder="지원OS를 입력하세요."></p>
-  <p style="color: #ff0000">구매필요여부:
-  <select name="post_buyneed">
-    <option value="오픈소스">오픈소스</option>
-    <option value="사내개발">사내개발</option>
-    <option value="상용">상용</option>
-  </select></p>
-  <p>Java8 지원버전: <input type="text" name="post_version" placeholder="Java8 지원버전을 입력하세요."></p>
-  <p>URL: <input type="text" name="post_url" placeholder="URL을 입력하세요."></p>
-  <p>사진업로드: <input type="file" name="image"></p>
-  <input type="submit" value="추가하기">
-</form>
 
+  <div class="row">
+    <div class="col-md-4">
+    </div>
+    <div class="col-md-4 text-center">
+      <h3 class="form-heading">Quality Tool 추가하기</h3>
+
+      <form action="/quality/write_complete" method="post" enctype="multipart/form-data">
+      <p>+ 분류 
+      <select name="post_category">
+        <option value="Coding Guideline">Coding Guideline</option>
+        <option value="Unit Test&Coverage">Unit Test&Coverage</option>
+        <option value="Static Analystics">Static Analystics</option>
+        <option value="Cyclomatic Complexity">Cyclomatic Complexity</option>
+      </select></p>
+      <p>도구명: <input class="form-input" type="text" name="post_tool" placeholder="도구명을 입력하세요."></p>
+      <p>용도: <textarea class="form-textarea" name="post_title" placeholder="도구 용도를 입력하세요."></textarea></p>
+      <p>지원언어: <input class="form-input" type="text" name="post_language" placeholder="지원언어를 입력하세요."></p>
+      <p>지원OS: <input class="form-input" type="text" name="post_os" placeholder="지원OS를 입력하세요."></p>
+      <p>구매필요여부:
+      <select name="post_buyneed">
+        <option value="오픈소스">오픈소스</option>
+        <option value="사내개발">사내개발</option>
+        <option value="상용">상용</option>
+      </select></p>
+      <p>Java8 지원버전: <input class="form-input" type="text" name="post_version" placeholder="Java8 지원버전을 입력하세요."></p>
+      <p>URL: <input class="form-input" type="text" name="post_url" placeholder="URL을 입력하세요."></p>
+      <p>+ 사진 업로드</P>
+      <p><input type="file" name="image"></p>
+      <input class="btn btn-lg btn-block" type="submit" value="추가하기">
+      </form>
+    </div>
+    <div class="col-md-4">
+    </div>
+  </div>
+</div>
 
 

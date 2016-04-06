@@ -1,0 +1,63 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+
+//$light-orange: #ff8c00;
+//$navbar-default-color: $light-orange;
+//$navbar-default-bg: #000000;
+//$navbar-default-link-color: gray;
+//$navbar-default-link-active-color: $light-orange;
+//$navbar-default-link-hover-color: white;
+//$navbar-default-link-hover-bg: black;
+
+@import 'bootstrap';
+
+//body { padding-top: 60px; }
+
+    .qptool-title {
+      height: 120px;
+      padding: 50px 0px 0px 0px;
+      text-align: center;
+    }
+
+    a.qptool-title-link {
+      color: #a3293d;
+    }
+
+    a.qptool-title-link:hover {
+      color: #ee3b53;
+      text-decoration: none;
+    }
+
+   .form-heading {
+  margin: 35px 0px 20px 0px;
+}
+
+.form-input {
+  width: 100%;
+  height: 40px;
+  border: 1.5px solid #cccccc;
+  border-radius: 6px;
+  padding: 0px 0px 0px 10px;
+}
+
+.form-textarea {
+  width: 100%;
+  height: 100px;
+  border: 1.5px solid #cccccc;
+  border-radius: 6px;
+  padding: 10px 0px 0px 10px;
+}
+

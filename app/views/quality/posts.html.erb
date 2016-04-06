@@ -1,10 +1,14 @@
-<%= flash[:alert] %>
+<div class="container">
+  <% if !flash[:alert].nil? %>
+  <div class="alert alert-danger">
+     <%= flash[:alert] %>
+  </div>
+  <% end %>
 
-<div>
-  <h2>QP TOOL 전체 분석</h2>
-  <p>최고의 TOOL 을 알려주세요!</p>
+  <div class="well text-center">
+    <h3>QP Measure TOOL 분석및 정보</h3>
+    <p>코드품질을 위한 제품정보 비교및 버전정보 제공</p>
+  </div>
+
+  <%= render :partial => "quality/posts" %>
 </div>
-
-<hr>
-
-<%= render :partial => "quality/posts" %>
