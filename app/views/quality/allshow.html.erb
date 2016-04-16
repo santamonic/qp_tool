@@ -1,0 +1,124 @@
+<%= render :partial => "quality/header" %>
+
+<div class="container">
+  <% if !flash[:alert].nil? %>
+  <div class="alert alert-danger">
+    <%= flash[:alert] %>
+  </div>
+  <% end %>
+
+   <div class="form-group">
+     <label class="control-label col-sm-1"></label>
+     <div class="well well-sm text-center  page-header">
+     <h3>Quality Tool All Category</h3>
+     <h3><p><small>코드 품질측정 툴 전체보기</small></p></h3>
+     </div>
+     </div>
+
+      <table class="table table-bordered">
+    <thead>
+      <tr>
+        <th>Quality Practice명</th>
+        <th>도구명</th>
+        <th>용도</th>
+        <th>지원언어</th>
+        <th>지원OS</th>
+        <th>구매필요여부</th>
+        <th>Java8지원버전</th>
+        <th>URL</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <% @selectToolCpp.reverse.each do |tool| %>
+        <td>
+        <%= tool.quality_practice %>
+        </td>
+        <td>
+        <%= tool.toolname %>
+        </td>
+        <td>
+        <%= tool.title %>
+        </td>
+        <td>
+        <%= tool.support_language %>
+        </td>
+        <td>
+        <%= tool.support_os %>
+        </td>
+        <td>
+        <%= tool.buy_need %>
+        </td>
+        <td>
+        <%= tool.support_javaversion %>
+        </td>
+        <td>
+        <%= tool.urlname %>
+        </td>
+      </tr>
+      <% end %>
+
+      <tr>
+        <% @selectToolUnder.reverse.each do |tool| %>
+        <td>
+        <%= tool.quality_practice %>
+        </td>
+        <td>
+        <%= tool.toolname %>
+        </td>
+        <td>
+        <%= tool.title %>
+        </td>
+        <td>
+        <%= tool.support_language %>
+        </td>
+        <td>
+        <%= tool.support_os %>
+        </td>
+        <td>
+        <%= tool.buy_need %>
+        </td>
+        <td>
+        <%= tool.support_javaversion %>
+        </td>
+        <td>
+        <%= tool.urlname %>
+        </td>
+      </tr>
+      <% end %>
+
+      <tr>
+        <% @selectToolCheck.reverse.each do |tool| %>
+        <td>
+        <%= tool.quality_practice %>
+        </td>
+        <td>
+        <%= tool.toolname %>
+        </td>
+        <td>
+        <%= tool.title %>
+        </td>
+        <td>
+        <%= tool.support_language %>
+        </td>
+        <td>
+        <%= tool.support_os %>
+        </td>
+        <td>
+        <%= tool.buy_need %>
+        </td>
+        <td>
+        <%= tool.support_javaversion %>
+        </td>
+        <td>
+        <%= tool.urlname %>
+        </td>
+      </tr>
+      <% end %>
+
+
+
+    </tbody>
+  </table>
+</div>
+

@@ -1,3 +1,5 @@
+<%= render :partial => "quality/header" %>
+
 <div class="container">
   <% if !flash[:alert].nil? %>
   <div class="alert alert-danger">
@@ -5,21 +7,39 @@
   </div>
   <% end %>
 
-  <h2 class="text-center">Qquality Measure Tool 정보보기</h2>
-  <div class="row">
-    <div class="col-md-1">
-    </div>
-    <div class="col-md-5 text-right">
-    <p><img src="<%= @post.image_url(:medium) %>" class="img-rounded"></p>
-    </div>
-    <div class="col-md-5">
-    <h3>ToolName: <%= @post.toolname %></h3>
-    <p><span class="label label-warning">분류: <%= @post.quality_practice %></span></p>
-    <p>내용: <%= @post.title %></p>
-    <p><a href="/quality/edit/<%= @post.id %>">수정</a> | <a href="/quality/delete_complete/<%= @post.id %>">삭제</a></p> 
-    </div>
-    <div class="col-md-1">
-    </div>
+   <div class="form-group">
+     <label class="control-label col-sm-1"></label>
+     <div class="well well-sm text-center  page-header">
+     <h3>Quality Tool Detail</h3>
+     <h3><p><small>코드 품질측정 툴 상세보기</small></p></h3>
+     </div>
+     </div>
+
+     <div class="row">
+       <div class="col-sm-7 text-center">
+         <p><img src="<%= @post.image_url(:medium) %>" class="img-rounded"></p>
+       </div>
+       <div class="col-sm-5 text-left">
+         <h4><span class="label label-success">Category</span></h4>
+         <h5><%= @post.quality_practice %></h5>
+         <h4><span class="label label-success">Tool Name</span></h4>
+         <h5><%= @post.toolname %></h5>
+         <h4><span class="label label-success">용도</span></h4>
+         <h5><%= @post.title %></h5>
+         <h4><span class="label label-success">지원언어</span></h4>
+         <h5><%= @post.support_language %></h5>
+         <h4><span class="label label-success">지원OS</span></h4>
+         <h5><%= @post.support_os %></h5>
+         <h4><span class="label label-success">구매필요여부</span></h4>
+         <h5><%= @post.buy_need %></h5>
+         <h4><span class="label label-success">Java8지원버전</span></h4>
+         <h5><%= @post.support_javaversion %></h5>
+         <h4><span class="label label-success">URL</span></h4>
+         <h5><%= @post.urlname %></h5>
+
+         <p><a href="/quality/edit/<%= @post.id %>"><button type="button" class="btn btn-button-modify btn-sm">수정</a></button>
+         <a href="/quality/delete_complete/<%= @post.id %>" data-method="delete"  data-confirm="정말 삭제하시겠습니까?"><button type="button" class="btn btn-button-modify btn-sm">삭제</a></button></p> 
+       </div>
   </div>
 </div>
 

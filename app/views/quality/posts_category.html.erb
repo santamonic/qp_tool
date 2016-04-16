@@ -5,6 +5,27 @@
     </div>
   </div>
 
-  <%= render :partial => "quality/posts" %>
+  <!--%= render :partial => "quality/posts" %-->
+
+  <% @posts.reverse.each do |post| %>
+
+  <div class="row text-center">
+  <div class="col-sm-6" >
+    <div class="thumbnail">
+      <h3><p>Coding Guideline</p></h3>
+      
+<p><img src="<%= post.image_url(:thumb) %>" class="img-rounded" width="100" height="100"></p>
+
+      <p><div  style="border: 1px solid; background-color:#00001a; height:150px"></p>
+      <p><h5><font color="white">Tool Name</h5></font></p>
+      <h5><p><span class="label selectbox"><a href="/quality/show/<%= post.id %>"><%= post.toolname %></a></span></h5>
+      <p><h5><font color="white">용도</h5></font></p>
+      <h5><p><span class="label selectbox"><a href="/quality/show/<%= post.id %>"><%= post.title %></a></span></p></h5>
+      </div>
+    </div>
+  </div>
+
+      <% end %>
+
 </div>
 

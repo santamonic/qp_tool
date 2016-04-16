@@ -26,22 +26,22 @@
 
 //body { padding-top: 60px; }
 
-    .qptool-title {
+.qptool-title {
       height: 120px;
       padding: 50px 0px 0px 0px;
       text-align: center;
     }
 
-    a.qptool-title-link {
+a.qptool-title-link {
       color: #a3293d;
     }
 
-    a.qptool-title-link:hover {
+a.qptool-title-link:hover {
       color: #ee3b53;
       text-decoration: none;
     }
 
-   .form-heading {
+.form-heading {
   margin: 35px 0px 20px 0px;
 }
 
@@ -61,3 +61,47 @@
   padding: 10px 0px 0px 10px;
 }
 
+.paging-header {
+    border: transparent;
+    background-color: transparent;
+    border-radius: 0;
+    color: #6f5499;
+
+}
+
+.box{
+   width:500px; 
+   border:1px solid #000;
+   margin:auto;
+
+}
+
+
+body {
+  font-family: "맑은 고딕", "Malgun Gothic", "나눔고딕", NanumGothic, "돋움", dotum, "Georgia Pro", Arial;
+  font-size: 14px;
+  line-height: 1.428571429;
+  color: #333333;
+  background-color: #ffffff;
+}
+
+.btn-button-modify, .btn-button-modify:link, .btn-button-modify:visited {
+    background-color: transparent;
+    border-radius: 0;
+    color: #9dc5a2;
+    border: 2px solid #9dc5a2;
+}
+.btn-button-modify:active, .btn-button-modify:hover {
+    background-color: #9dc5a2;
+    color: #fff
+}
+
+.btn-button-modify.btn-lg {
+    border: 3px solid #1a9a29;
+}
+.btn-button-modify.btn-sm {
+    border: 2px solid #1a9a29;
+}  
+.btn-button-modify.btn-xs {
+    border: 1px solid #1a9a29;
+}  

@@ -3,6 +3,7 @@ Rails.application.routes.draw do
 #  get "quality/posts_category" 
   get "/:quality_practice" => 'quality#posts_category'
   get "quality/show/:id" => 'quality#show'
+  get "quality/allshow"
   get "quality/write"
   post "quality/write_complete"
   get "quality/edit/:id" => 'quality#edit'

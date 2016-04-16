@@ -1,3 +1,5 @@
+ <%= render :partial => "quality/header" %>
+
 <div class="container">
   <% if !flash[:alert].nil? %>
   <div class="alert alert-danger">
@@ -5,38 +7,98 @@
   </div>
   <% end %>
 
-  <div class="row">
-    <div class="col-md-4">
-    </div>
-    <div class="col-md-4 text-center">
-      <h3>Quality Tool 수정하기</h3>
+   <form class="form-horizontal" role="form" action="/quality/edit_complete" method="post">
+     <input type="hidden" name="id" value="<%= @post.id %>">
+     <div class="form-group">
+     <label class="control-label col-sm-1"></label>
+     <div class="col-sm-9 well well-sm text-center page-header">
+     <h3>Quality Tool Edit</h3>
+     <h3><p><small>코드 품질측정에 사용할수 있는 툴 수정</small></p></h3>
+     </div>
+     </div>
 
-      <form action="/quality/edit_complete" method="post">
-        <input type="hidden" name="id" value="<%= @post.id %>">
-        <p>+ 분류 
-        <select name="post_category">
-          <option value="Coding Guideline">Coding Guideline</option>
-          <option value="Unit Test&Coverage">Unit Test&Coverage</option>
-          <option value="Static Analystics">Static Analystics</option>
-          <option value="Cyclomatic Complexity">Cyclomatic Complexity</option>
-          </select></p>
-          <p>도구명: <input class="form-input" type="text" name="post_tool" value="<%= @post.toolname %>"></p>
-          <p>용도: <textarea class="form-textarea" name="post_title" ><%= @post.title %></textarea></p>
-          <p>지원언어: <input class="form-input" type="text" name="post_language" value="<%= @post.support_language %>"></p>
-          <p>지원OS: <input class="form-input" type="text" name="post_os" value="<%= @post.support_os %>"></p>
-          <p>구매필요여부:
-          <select name="post_buyneed">
-            <option value="오픈소스">오픈소스</option>
-            <option value="사내개발">사내개발</option>
-            <option value="상용">상용</option>
-          </select></p>
-          <p>Java8 지원버전: <input class="form-input" type="text" name="post_version" value="<%= @post.support_javaversion %>"></p>
-          <p>URL: <input class="form-input" type="text" name="post_url"  value="<%= @post.urlname %>"></p>
-          <input class="btn btn-lg btn-block" type="submit" value="수정하기">
-        </form>
+     <div class="form-group">
+      <label class="control-label col-sm-2" for="category">Category</label>
+      <div class="col-sm-6">
+      
+      <select class="form-control selectpicker" name="post_category" data-style="btn-success">
+        <option selected value="default"><%= @post.quality_practice %></option>
+        <option value="Coding Guideline">Coding Guideline</option>
+        <option value="Unit Test&Coverage">Unit Test&Coverage</option>
+        <option value="Static Analystics">Static Analystics</option>
+        <option value="Cyclomatic Complexity">Cyclomatic Complexity</option>
+        </select>
+      </div>
+    </div>
+    <div class="form-group">
+      <label class="control-label col-sm-2" for="toolname">Tool Name</label>
+      <div class="col-sm-6"> 
+      <input class="form-control" type="text" name="post_tool"  value="<%= @post.toolname %>">
+      </div>
+    </div>
+    <div class="form-group">
+      <label class="control-label col-sm-2" for="title">용도</label>
+      <div class="col-sm-6">
+      <input class="form-control" name="post_title" value="<%= @post.title %>">
+      </div>
+    </div>
+    <div class="form-group">
+      <label class="control-label col-sm-2" for="language">지원언어</label>
+      <div class="col-sm-6">
+      <select class="form-control selectpicker" multiple name="post_language" data-style="btn-success">
+        <!--option value="test" selected="selected"><!%= @post.support_language %></option-->
+        <option selected value="Default"><%= @post.support_language %></option>
+        <option value="c">C</option>
+        <option value="c++">C++</option>
+        <option value="c#">C#</option>
+        <option value="java">Java</option>
+        <option value="groovy">Groovy</option>
+        <option value="objectivec">Objective C</option>
+      </select>
      </div>
-     <div class="col-md-4">
-     </div>
+    </div>
+    <div class="form-group">
+      <label class="control-label col-sm-2" for="os">지원OS</label>
+      <div class="col-sm-6">
+      <select class="form-control selectpicker" multiple name="post_os" data-style="btn-success">
+        <option value="window">Window</option>
+        <option value="linux">Linux</option>
+        <option value="mac">Mac</option>
+      </select> 
+      </div>
+    </div>
+    <div class="form-group">
+      <label class="control-label col-sm-2" for="buyneed">구매필요여부</label>
+      <div class="col-sm-6">
+      <select class="form-control selectpicker" name="post_buyneed" data-style="btn-success">
+        <option selected></option>
+        <option value="오픈소스">오픈소스</option>
+        <option value="사내개발">사내개발</option>
+        <option value="상용">상용</option>
+      </select>
+      </div>
    </div>
-</div>
+   <div class="form-group">
+      <label class="control-label col-sm-2" for="version">Java8지원버전</label>
+      <div class="col-sm-6">
+      <input class="form-control" type="text" name="post_version"  value="<%= @post.support_javaversion %>">
+      </div>
+   </div>
+   <div class="form-group">
+      <label class="control-label col-sm-2" for="url">URL</label>
+      <div class="col-sm-6">
+      <input class="form-control" type="text" name="post_url" value="<%= @post.urlname %>">
+      </div>
+   </div>
+   <div class="form-group">
+      <label class="control-label col-sm-2" for="submit"></label>
+      <div class="col-sm-6">
+      <input class="btn btn-success btn-lg btn-block" type="submit" value="Edit">
+      </div>
+   </div>
+  </form>
+   </div>
+    <div class="col-sm-4">
+    </div>
+
 

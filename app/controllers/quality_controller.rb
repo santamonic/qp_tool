@@ -1,9 +1,18 @@
 class QualityController < ApplicationController
   def posts
     @posts = Post.all
+    @selectQpCoding     = Post.where(quality_practice: 'Coding Guideline')
+    @selectQpUnit       = Post.where(quality_practice: 'Unit Test&Coverage')
+    @selectQpStatic     = Post.where(quality_practice: 'Static Analystics')
+    @selectQpcyclomatic = Post.where(quality_practice: 'Cyclomatic Complexity')
   end
 
   def posts_category
+    @selectQpCoding     = Post.where(quality_practice: 'Coding Guideline')
+    @selectQpUnit       = Post.where(quality_practice: 'Unit Test&Coverage')
+    @selectQpStatic     = Post.where(quality_practice: 'Static Analystics')
+    @selectQpcyclomatic = Post.where(quality_practice: 'Cyclomatic Complexity')
+
     case params[:quality_practice]
     when "coding"
       @quality_practice = "Coding Guideline"
@@ -19,6 +28,11 @@ class QualityController < ApplicationController
 
   def show
     @post = Post.find(params[:id]) 
+  end
+  def allshow
+    @selectToolCpp   = Post.where(toolname: 'CppUnit')  
+    @selectToolUnder = Post.where(toolname: 'UnderstandGUI')  
+    @selectToolCheck    = Post.where(toolname: 'Checkstyle')  
   end
 
   def write

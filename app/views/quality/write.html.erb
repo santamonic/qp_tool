@@ -6,13 +6,13 @@
     <%= flash[:alert] %>
   </div>
   <% end %>
- 
+
    <form class="form-horizontal" role="form" action="/quality/write_complete" method="post" enctype="multipart/form-data">
      <div class="form-group">
-     <label class="control-label col-sm-2"></label>
-     <div class="col-sm-6 page-header">
-     <h1>Quality Tool Saving</h1>
-     <h2><p><small>코드 품질측정에 사용할수 있는 툴 저장</small></p></h2>
+     <label class="control-label col-sm-1"></label>
+     <div class="col-sm-9 well well-sm text-center page-header">
+     <h3>Quality Tool Saving</h3>
+     <h3><p><small>코드 품질측정에 사용할수 있는 툴 저장</small></p></h3>
      </div>
      </div>
 
@@ -26,6 +26,14 @@
         <option value="Static Analystics">Static Analystics</option>
         <option value="Cyclomatic Complexity">Cyclomatic Complexity</option>
         </select>
+        <!--script language="javascript">
+        $('.test').click(function () {
+//  $('.post_category').find('[value=Static Analystics]').remove();
+ // $('.post_category').selectpicker('refresh');
+//        $('select[name=post_category]').val(1);
+        $('select[name=post_category]').selectpicker('refresh');
+});
+     </script-->
       </div>
     </div>
     <div class="form-group">
@@ -34,6 +42,15 @@
       <input class="form-control" type="text" name="post_tool" placeholder="도구명을 입력하세요.">
       </div>
     </div>
+   <div class="form-group">
+      <label class="control-label col-sm-2" for="image">사진 업로드</label>
+      <div class="col-sm-10">
+        <label class="file">
+	  <input type="file" name="image">
+	  <span class="file-custom"></span>
+        </label>
+      </div>
+   </div>
     <div class="form-group">
       <label class="control-label col-sm-2" for="title">용도</label>
       <div class="col-sm-6">
@@ -51,7 +68,6 @@
         <option value="groovy">Groovy</option>
         <option value="objectivec">Objective C</option>
       </select>
-
      </div>
     </div>
     <div class="form-group">
@@ -88,22 +104,13 @@
       </div>
    </div>
    <div class="form-group">
-      <label class="control-label col-sm-2" for="image">사진 업로드</label>
-      <div class="col-sm-10">
-        <label class="file">
-	  <input type="file" name="image">
-	  <span class="file-custom"></span>
-        </label>
-      </div>
-   </div>
-   <div class="form-group">
       <label class="control-label col-sm-2" for="submit"></label>
       <div class="col-sm-6">
       <input class="btn btn-success btn-lg btn-block" type="submit" value="Save">
       </div>
    </div>
-      </form>
-    </div>
+  </form>
+   </div>
     <div class="col-sm-4">
     </div>
 
