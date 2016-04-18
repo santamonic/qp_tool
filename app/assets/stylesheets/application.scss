@@ -26,21 +26,6 @@
 
 //body { padding-top: 60px; }
 
-.qptool-title {
-      height: 120px;
-      padding: 50px 0px 0px 0px;
-      text-align: center;
-    }
-
-a.qptool-title-link {
-      color: #a3293d;
-    }
-
-a.qptool-title-link:hover {
-      color: #ee3b53;
-      text-decoration: none;
-    }
-
 .form-heading {
   margin: 35px 0px 20px 0px;
 }
@@ -69,6 +54,26 @@ a.qptool-title-link:hover {
 
 }
 
+.background-normal {
+    border: 1px solid;
+    background-color: #00001a;
+    border-radius: 0;
+    color: #6f5499;
+
+}
+
+.background-top {
+    border: 1px solid;
+    background-color: #000033;
+    border-radius: 0;
+    color: #ffffff;
+
+}
+
+.background-line {
+    background-color: #e6e6ff;
+
+}
 .box{
    width:500px; 
    border:1px solid #000;
@@ -77,31 +82,32 @@ a.qptool-title-link:hover {
 }
 
 
-body {
-  font-family: "맑은 고딕", "Malgun Gothic", "나눔고딕", NanumGothic, "돋움", dotum, "Georgia Pro", Arial;
-  font-size: 14px;
+div {
+//  font-family: "맑은 고딕", "Malgun Gothic", "나눔고딕", NanumGothic, "돋움", dotum, "Georgia Pro", Arial;
+  font-family: Times New Roman, Times, serif, Arial, Helvetica, sans-serif;
+  font-size: 17px;
   line-height: 1.428571429;
   color: #333333;
   background-color: #ffffff;
 }
 
-.btn-button-modify, .btn-button-modify:link, .btn-button-modify:visited {
+.btn-button-modify,  .btn-button-modify:visited {
     background-color: transparent;
     border-radius: 0;
-    color: #9dc5a2;
-    border: 2px solid #9dc5a2;
+    color: #00001a;
+    border: 2px solid #00001a;
 }
 .btn-button-modify:active, .btn-button-modify:hover {
-    background-color: #9dc5a2;
-    color: #fff
+    background-color: #00001a;
+    color: #00001a
 }
 
 .btn-button-modify.btn-lg {
-    border: 3px solid #1a9a29;
+    border: 3px solid #00001a;
 }
 .btn-button-modify.btn-sm {
-    border: 2px solid #1a9a29;
+    border: 2px solid #00001a;
 }  
 .btn-button-modify.btn-xs {
-    border: 1px solid #1a9a29;
+    border: 1px solid #00001a;
 }  

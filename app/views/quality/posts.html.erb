@@ -1,23 +1,29 @@
+ <%= render :partial => "quality/header" %>
+
 <div class="container">
   <% if !flash[:alert].nil? %>
   <div class="alert alert-danger">
      <%= flash[:alert] %>
   </div>
   <% end %>
-
-  <div class="well well-sm text-center page-header">
+  <div class="text-center">
     <h3>QP Measure TOOL 분석및 정보</h3>
     <h3><p><small>코드품질을 위한 제품정보 비교및 버전정보 제공</small></p></h3>
   </div>
     
      <div class="col-sm-6 text-right">
-     <p><a href="/quality/write" class="btn btn-default btn-lg" role="button"><strong>add your qptool</strong></a></p>
+     <p><a href="/quality/write" class="btn btn-default btn-lg" role="button">
+     <strong>Add your qptool</strong></a></p>
      </div>
+
      <div class="col-sm-6 text-left">
-     <p><a href="/quality/allshow" class="btn btn-default btn-lg" role="button"><strong>all category</strong></a></p>
+     <p><a href="/quality/allshow" class="btn btn-default btn-lg" role="button">
+     <strong>All category</strong></a></p>
      </div>
-      
-  <%= render :partial => "quality/posts" %>
+ 
+     <div class="jumbotron">
+     </div>
+     <%= render :partial => "quality/posts" %>
+
 
 </div>
-

@@ -9,37 +9,40 @@
 
    <div class="form-group">
      <label class="control-label col-sm-1"></label>
-     <div class="well well-sm text-center  page-header">
-     <h3>Quality Tool Detail</h3>
+     <div class="well well-sm text-center">
+     <h3>QP Measure TOOL Detail</h3>
      <h3><p><small>코드 품질측정 툴 상세보기</small></p></h3>
      </div>
+   </div>
+
+   <div class="col-sm-12 text-center">
+     <p><img src="<%= @post.image_url(:thumb) %>" class="img-rounded"></p>
+   </div>
+
+
+   <div class="col-sm-12 text-center">
+     <h4><span class="label background-normal">Category</span></h4>
+     <h4><strong><%= @post.quality_practice %></strong></h4>
+     <h4><span class="label background-normal">Tool Name</span></h4>
+     <h4><strong><%= @post.toolname %></strong></h4>
+     <h4><span class="label background-normal">용도</span></h4>
+     <h5><strong><%= @post.title %></strong></h5>
+     <h4><span class="label background-normal">지원언어</span></h4>
+     <h4><strong><%= @post.support_language %></strong></h4>
+     <h4><span class="label background-normal">지원OS</span></h4>
+     <h4><strong><%= @post.support_os %></strong></h5>
+     <h4><span class="label background-normal">구매필요여부</span></h4>
+     <h5><strong><%= @post.buy_need %></strong></h5>
+     <h4><span class="label background-normal">Java8지원버전</span></h4>
+     <h4><strong><%= @post.support_javaversion %></strong></h4>
+     <h4><span class="label background-normal">URL</span></h4>
+     <h4><strong><%= @post.urlname %></strong></h4>
+
+     <div class="btn btn-button-modify btn-sm"><a href="/quality/edit/<%= @post.id %>">
+      <button type="button" >수정</button></a></div>
+     <div class="btn btn-button-modify btn-sm"><a href="/quality/delete_complete/<%= @post.id %>" data-method="delete"  data-confirm="정말 삭제하시겠습니까?">
+      <button type="button">삭제</button></a></div>
      </div>
-
-     <div class="row">
-       <div class="col-sm-7 text-center">
-         <p><img src="<%= @post.image_url(:medium) %>" class="img-rounded"></p>
-       </div>
-       <div class="col-sm-5 text-left">
-         <h4><span class="label label-success">Category</span></h4>
-         <h5><%= @post.quality_practice %></h5>
-         <h4><span class="label label-success">Tool Name</span></h4>
-         <h5><%= @post.toolname %></h5>
-         <h4><span class="label label-success">용도</span></h4>
-         <h5><%= @post.title %></h5>
-         <h4><span class="label label-success">지원언어</span></h4>
-         <h5><%= @post.support_language %></h5>
-         <h4><span class="label label-success">지원OS</span></h4>
-         <h5><%= @post.support_os %></h5>
-         <h4><span class="label label-success">구매필요여부</span></h4>
-         <h5><%= @post.buy_need %></h5>
-         <h4><span class="label label-success">Java8지원버전</span></h4>
-         <h5><%= @post.support_javaversion %></h5>
-         <h4><span class="label label-success">URL</span></h4>
-         <h5><%= @post.urlname %></h5>
-
-         <p><a href="/quality/edit/<%= @post.id %>"><button type="button" class="btn btn-button-modify btn-sm">수정</a></button>
-         <a href="/quality/delete_complete/<%= @post.id %>" data-method="delete"  data-confirm="정말 삭제하시겠습니까?"><button type="button" class="btn btn-button-modify btn-sm">삭제</a></button></p> 
-       </div>
   </div>
 </div>
 

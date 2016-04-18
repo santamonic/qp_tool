@@ -1,31 +1,33 @@
-<div class="container">
-  <div class="panel panel-default">
-    <div class="panel-heading">
-      <h3 class="panel-title"><%= @quality_practice %> 리스트입니다.</h3>
-    </div>
-  </div>
+<div class="container"> 
+   <% if !flash[:alert].nil? %> 
+   <div class="alert alert-danger"> 
+      <%= flash[:alert] %> 
+   </div> 
+   <% end %> 
 
-  <!--%= render :partial => "quality/posts" %-->
+  <div class="well well-sm text-center">
+    <h3>QP Measure TOOL Category 분류</h3>
+    <h2><p><small><%= @quality_practice %></small></p></h2>
+  </div>
 
   <% @posts.reverse.each do |post| %>
 
   <div class="row text-center">
   <div class="col-sm-6" >
     <div class="thumbnail">
-      <h3><p>Coding Guideline</p></h3>
+      <h3><p><%= @quality_practice %></p></h3>
+     <a href="/quality/show/<%= post.id %>">
       
-<p><img src="<%= post.image_url(:thumb) %>" class="img-rounded" width="100" height="100"></p>
+      <p><img src="<%= post.image_url(:thumb) %>" class="img-rounded" width="100" height="100"></p></a>
 
       <p><div  style="border: 1px solid; background-color:#00001a; height:150px"></p>
       <p><h5><font color="white">Tool Name</h5></font></p>
-      <h5><p><span class="label selectbox"><a href="/quality/show/<%= post.id %>"><%= post.toolname %></a></span></h5>
+      <h4><p><span class="label label-danger"><%= post.toolname %></a></span></h4>
       <p><h5><font color="white">용도</h5></font></p>
-      <h5><p><span class="label selectbox"><a href="/quality/show/<%= post.id %>"><%= post.title %></a></span></p></h5>
+      <p><span class="label label-danger"><%= post.title %></a></span></p>
       </div>
     </div>
   </div>
-
-      <% end %>
-
+  <% end %>
 </div>
 

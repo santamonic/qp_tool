@@ -1,25 +1,29 @@
+
 <div class="row text-center">
-  <div class="col-sm-6" >
+  <div class="col-sm-6"> 
     <div class="thumbnail">
       <h3><p>Coding Guideline</p></h3>
+      <a href="/coding">
       <%= image_tag '1.jpg' ,alt: "coding guild", width: 150, height: 150 %>
-      <p><div  style="border: 1px solid; background-color:#00001a; height:150px"></p>
+      <p><div  style="border: 1px solid; background-color:#00001a; height:150px"></p></a>
       <p><h5><font color="white">Tool Name</h5></font></p>
-      <% @selectQpCoding.reverse.each do |post| %>      
-      <h5><p><span class="label selectbox"><%= post.toolname %></span></p></h5>
+      <% @selectQpCoding.reverse.each do |post| %>
+      <h4><p><span class="label label-danger"><%= post.toolname %></span></p></h4>
       <% end %>
       </div>
     </div>
   </div>
-  
+
+
   <div class="col-sm-6">
     <div class="thumbnail">
       <h3><p>Unit Test&Coverage</p></h3>
+      <a href="/unit">
       <%= image_tag '7.jpg' ,alt: "coding guild", width: 150, height: 150 %>
-      <p><div  style="border: 1px solid; background-color:#00001a; height:150px"></p>
+      <p><div  style="border: 1px solid; background-color:#00001a; height:150px"></p></a>
       <p><h5><font color="white">Tool Name</h5></font></p>
       <% @selectQpUnit.reverse.each do |post| %>      
-      <h5><p><span class="label selectbox"><%= post.toolname %></span></p></h5>
+      <h4><p><span class="label label-danger"><%= post.toolname %></span></p></h4>
       <% end %>
       </div>
     </div>
@@ -29,11 +33,12 @@
   <div class="col-sm-6">
     <div class="thumbnail">
       <h3><p>Static Analystics</p></h3>
+      <a href="/static">
       <%= image_tag '1.jpg' ,alt: "coding guild", width: 150, height: 150 %>
-      <p><div  style="border: 1px solid; background-color:#00001a; height:150px"></p>
+      <p><div  style="border: 1px solid; background-color:#00001a; height:150px"></p></a>
       <p><h5><font color="white">Tool Name</h5></font></p>
       <% @selectQpStatic.reverse.each do |post| %>      
-      <h5><p><span class="label selectbox"><%= post.toolname %></span></p></h5>
+      <h4><p><span class="label label-danger"><%= post.toolname %></span></p></h4>
       <% end %>
       </div>
     </div>
@@ -41,16 +46,23 @@
   
   <div class="col-sm-6">
     <div class="thumbnail">
-      <h3><p>Cyclomatic Complexity></p></h3>
+      <h3><p>Cyclomatic Complexity</p></h3>
+      <a href="/cyclomatic">
       <%= image_tag '1.jpg' ,alt: "coding guild", width: 150, height: 150 %>
-      <p><div  style="border: 1px solid; background-color:#00001a; height:150px"></p>
+      <p><div  style="border: 1px solid; background-color:#00001a; height:150px"></p></a>
       <p><h5><font color="white">Tool Name</h5></font></p>
       <% @selectQpcyclomatic.reverse.each do |post| %>      
-      <h5><p><span class="label selectbox"><%= post.toolname %></span></p></h5>
+      <h4><p><span class="label label-danger"><%= post.toolname %></span></p></h4>
       <% end %>
       </div>
     </div>
   </div>
 </div>
-
+     
+ <div class="container">
+  <ul class="pager">
+    <li class="previous"><a href="#">Previous</a></li>
+    <li class="next"><a href="#">Next</a></li>
+  </ul>
+</div> 
 
