@@ -12,17 +12,17 @@
      <div class="form-group">
      <label class="control-label col-sm-1"></label>
      <div class="col-sm-9 well well-sm text-center page-header">
-     <h3>Quality Tool Edit</h3>
+     <h3>QP Measure Tool Edit</h3>
      <h3><p><small>코드 품질측정에 사용할수 있는 툴 수정</small></p></h3>
      </div>
      </div>
 
      <div class="form-group">
-      <label class="control-label col-sm-2" for="category">Category</label>
+      <label class="control-label col-sm-2" for="category">Category *</label>
       <div class="col-sm-6">
       
-      <select class="form-control selectpicker" name="post_category" data-style="btn-success">
-        <option selected value="default"><%= @post.quality_practice %></option>
+      <select class="form-control selectpicker" name="post_category" data-style="background-top">
+        <option value="" disabled selected><%= @post.quality_practice %></option>
         <option value="Coding Guideline">Coding Guideline</option>
         <option value="Unit Test&Coverage">Unit Test&Coverage</option>
         <option value="Static Analystics">Static Analystics</option>
@@ -31,7 +31,7 @@
       </div>
     </div>
     <div class="form-group">
-      <label class="control-label col-sm-2" for="toolname">Tool Name</label>
+      <label class="control-label col-sm-2" for="toolname">Tool Name *</label>
       <div class="col-sm-6"> 
       <input class="form-control" type="text" name="post_tool"  value="<%= @post.toolname %>">
       </div>
@@ -43,11 +43,10 @@
       </div>
     </div>
     <div class="form-group">
-      <label class="control-label col-sm-2" for="language">지원언어</label>
+      <label class="control-label col-sm-2" for="language">지원언어 *</label>
       <div class="col-sm-6">
-      <select class="form-control selectpicker" multiple name="post_language" data-style="btn-success">
-        <!--option value="test" selected="selected"><!%= @post.support_language %></option-->
-        <option selected value="Default"><%= @post.support_language %></option>
+      <select class="form-control selectpicker" multiple name="post_language" data-style="background-top">
+        <option value="" disabled selected ><%= @post.support_language %></option>
         <option value="c">C</option>
         <option value="c++">C++</option>
         <option value="c#">C#</option>
@@ -58,9 +57,10 @@
      </div>
     </div>
     <div class="form-group">
-      <label class="control-label col-sm-2" for="os">지원OS</label>
+      <label class="control-label col-sm-2" for="os">지원OS *</label>
       <div class="col-sm-6">
-      <select class="form-control selectpicker" multiple name="post_os" data-style="btn-success">
+      <select class="form-control selectpicker" multiple name="post_os" data-style="background-top">
+        <option selected value="Default"><%= @post.support_os %></option>
         <option value="window">Window</option>
         <option value="linux">Linux</option>
         <option value="mac">Mac</option>
@@ -68,10 +68,10 @@
       </div>
     </div>
     <div class="form-group">
-      <label class="control-label col-sm-2" for="buyneed">구매필요여부</label>
+      <label class="control-label col-sm-2" for="buyneed">구매필요여부 *</label>
       <div class="col-sm-6">
-      <select class="form-control selectpicker" name="post_buyneed" data-style="btn-success">
-        <option selected></option>
+      <select class="form-control selectpicker" name="post_buyneed" data-style="background-top">
+        <option selected value="" disabled selected><%= @post.buy_need %></option>
         <option value="오픈소스">오픈소스</option>
         <option value="사내개발">사내개발</option>
         <option value="상용">상용</option>
@@ -93,7 +93,7 @@
    <div class="form-group">
       <label class="control-label col-sm-2" for="submit"></label>
       <div class="col-sm-6">
-      <input class="btn btn-success btn-lg btn-block" type="submit" value="Edit">
+      <input class="btn background-normal btn-lg btn-block" type="submit" value="Edit">
       </div>
    </div>
   </form>

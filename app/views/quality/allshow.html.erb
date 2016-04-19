@@ -10,7 +10,7 @@
    <div class="form-group">
      <label class="control-label col-sm-1"></label>
      <div class="well well-sm text-center">
-     <h3>Quality Tool All Category</h3>
+     <h3>QP Measure Tool All Category</h3>
      <h3><p><small>코드 품질측정 툴 전체보기</small></p></h3>
      </div>
      </div>
@@ -32,28 +32,28 @@
       <tr>
         <% @posts.each do |tool| %>
         <td>
-        <%= tool.quality_practice %>
+        <strong><%= tool.quality_practice %></strong>
         </td>
         <td>
-        <%= tool.toolname %>
+        <strong><%= tool.toolname %></strong>
         </td>
         <td>
-        <%= tool.title %>
+        <strong><%= tool.title %></strong>
         </td>
         <td>
-        <%= tool.support_language %>
+        <strong><%= tool.support_language %></strong>
         </td>
         <td>
-        <%= tool.support_os %>
+        <strong><%= tool.support_os %></strong>
         </td>
         <td>
-        <%= tool.buy_need %>
+        <strong><%= tool.buy_need %></strong>
         </td>
         <td>
-        <%= tool.support_javaversion %>
+        <strong><%= tool.support_javaversion %></strong>
         </td>
         <td>
-        <%= tool.urlname %>
+        <strong><%= tool.urlname %></strong>
         </td>
       </tr>
       <% end %>

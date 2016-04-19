@@ -58,20 +58,18 @@
     border: 1px solid;
     background-color: #00001a;
     border-radius: 0;
-    color: #6f5499;
+    color: #ffffff;
 
 }
 
 .background-top {
     border: 1px solid;
     background-color: #000033;
-    border-radius: 0;
     color: #ffffff;
-
 }
 
 .background-line {
-    background-color: #e6e6ff;
+    background-color: #b3b3cc;
 
 }
 .box{
@@ -83,7 +81,6 @@
 
 
 div {
-//  font-family: "맑은 고딕", "Malgun Gothic", "나눔고딕", NanumGothic, "돋움", dotum, "Georgia Pro", Arial;
   font-family: Times New Roman, Times, serif, Arial, Helvetica, sans-serif;
   font-size: 17px;
   line-height: 1.428571429;
@@ -110,4 +107,11 @@ div {
 }  
 .btn-button-modify.btn-xs {
     border: 1px solid #00001a;
-}  
+} 
+
+table, thead, tbody, tr {
+  font-family: sans-serif;
+  font-size:   12px;
+  text-align: center;
+} 
+
