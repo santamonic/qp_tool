@@ -15,7 +15,13 @@
      </div>
      </div>
 
-      <table class="table table-bordered">
+     <div class="col-sm-6 text-right">
+     <p><a href="http://devcafe.nhncorp.com/QPTalk/wiki_1" class="btn btn-default btn-sm" role="button">
+     <strong>QP Manual</strong></a></p>
+     </div>
+ 
+
+    <table class="table table-bordered">
     <thead>
       <tr class="background-top">
         <th>Quality Practice명</th>
@@ -34,25 +40,25 @@
         <td>
         <strong><%= tool.quality_practice %></strong>
         </td>
-        <td>
+        <td class="background-row">
         <strong><%= tool.toolname %></strong>
         </td>
         <td>
         <strong><%= tool.title %></strong>
         </td>
-        <td>
-        <strong><%= tool.support_language %></strong>
+        <td class="background-row">
+        <strong><%= tool.support_language.delete('[],"') %></strong>
         </td>
         <td>
-        <strong><%= tool.support_os %></strong>
+        <strong><%= tool.support_os.delete('[],"') %></strong>
         </td>
-        <td>
+        <td class="background-row">
         <strong><%= tool.buy_need %></strong>
         </td>
         <td>
         <strong><%= tool.support_javaversion %></strong>
         </td>
-        <td>
+        <td class="background-row">
         <strong><%= tool.urlname %></strong>
         </td>
       </tr>
@@ -60,5 +66,11 @@
 
     </tbody>
   </table>
+</div>
+<div class="container">
+  <ul class="pager">
+    <li class="previous"><a href="/">Previous</a></li>
+    <li class="next"><a href="/">Next</a></li>
+  </ul>
 </div>
 

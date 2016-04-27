@@ -26,6 +26,10 @@
         <option value="Static Analystics">Static Analystics</option>
         <option value="Cyclomatic Complexity">Cyclomatic Complexity</option>
         </select>
+        <script>
+        $('select[name=post_category]').val(1);
+        $('.selectpicker').selectpicker('refresh')
+        </script>
       </div>
     </div>
     <div class="form-group">
@@ -52,7 +56,7 @@
     <div class="form-group">
       <label class="control-label col-sm-2" for="language">지원언어 *</label>
       <div class="col-sm-6">
-      <select class="form-control selectpicker" multiple name="post_language" data-style="background-top">
+      <select class="form-control selectpicker" multiple="multiple" name="post_language[]" data-style="background-top">
         <option value="c">C</option>
         <option value="c++">C++</option>
         <option value="c#">C#</option>
@@ -60,16 +64,24 @@
         <option value="groovy">Groovy</option>
         <option value="objectivec">Objective C</option>
       </select>
+        <script>
+        $('select[name=post_language]').val(1);
+        $('.selectpicker').selectpicker('refresh')
+        </script>
      </div>
     </div>
     <div class="form-group">
       <label class="control-label col-sm-2" for="os">지원OS *</label>
       <div class="col-sm-6">
-      <select class="form-control selectpicker" multiple name="post_os" data-style="background-top">
+      <select class="form-control selectpicker" multiple name="post_os[]" data-style="background-top">
         <option value="window">Window</option>
         <option value="linux">Linux</option>
         <option value="mac">Mac</option>
       </select> 
+        <script>
+        $('select[name=post_os]').val(1);
+        $('.selectpicker').selectpicker('refresh')
+        </script>
       </div>
     </div>
     <div class="form-group">
@@ -81,6 +93,10 @@
         <option value="사내개발">사내개발</option>
         <option value="상용">상용</option>
       </select>
+        <script>
+        $('select[name=post_buyneed]').val(1);
+        $('.selectpicker').selectpicker('refresh')
+        </script>
       </div>
    </div>
    <div class="form-group">

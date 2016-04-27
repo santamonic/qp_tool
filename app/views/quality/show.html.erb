@@ -21,26 +21,26 @@
 
 
    <div class="col-sm-12 text-center">
-     <h4><span class="label background-normal">Category</span></h4>
+     <span class="badge badge-info"><font size="3">Category</font></span>
      <h4><strong><%= @post.quality_practice %></strong></h4>
-     <h4><span class="label background-normal">Tool Name</span></h4>
+     <span class="badge badge-info"><font size="3">Tool Name</font></span>
      <h4><strong><%= @post.toolname %></strong></h4>
-     <h4><span class="label background-normal">용도</span></h4>
+     <span class="badge badge-info"><font size="3">용도</font></span>
      <h5><strong><%= @post.title %></strong></h5>
-     <h4><span class="label background-normal">지원언어</span></h4>
-     <h4><strong><%= @post.support_language %></strong></h4>
-     <h4><span class="label background-normal">지원OS</span></h4>
-     <h4><strong><%= @post.support_os %></strong></h5>
-     <h4><span class="label background-normal">구매필요여부</span></h4>
+     <span class="badge badge-info">지원언어</span>
+     <h4><strong><%= @post.support_language.delete('[],"') %></strong></h4>
+     <span class="badge badge-info">지원OS</span>
+     <h4><strong><%= @post.support_os.delete('[],"') %></strong></h5>
+     <span class="badge badge-info">구매필요여부</span>
      <h5><strong><%= @post.buy_need %></strong></h5>
-     <h4><span class="label background-normal">Java8지원버전</span></h4>
+     <span class="badge badge-info">Java8지원버전</span>
      <h4><strong><%= @post.support_javaversion %></strong></h4>
-     <h4><span class="label background-normal">URL</span></h4>
+     <span class="badge badge-info">URL</span>
      <h4><strong><%= @post.urlname %></strong></h4>
 
      <div class="btn btn-button-modify btn-sm"><a href="/quality/edit/<%= @post.id %>">
       <button type="button" >수정</button></a></div>
-     <div class="btn btn-button-modify btn-sm"><a href="/quality/delete_complete/<%= @post.id %>" data-method="delete"  data-confirm="정말 삭제하시겠습니까?">
+     <div class="btn btn-button-modify btn-sm"><a href="/quality/delete_complete/<%= @post.id %>" data-confirm="정말 삭제하시겠습니까?">
       <button type="button">삭제</button></a></div>
      </div>
   </div>

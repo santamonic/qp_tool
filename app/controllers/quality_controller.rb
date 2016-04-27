@@ -60,7 +60,8 @@ class QualityController < ApplicationController
   end
 
   def edit
-    @post = Post.find(params[:id]) 
+    @post = Post.find(params[:id])
+    @posts = Post.all
   end
 
   def edit_complete
